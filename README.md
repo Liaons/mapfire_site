@@ -3,6 +3,7 @@
 > **Plataforma para mapeamento de Degradação, Queimadas e Fluxo de Carbono do Estado do Maranhão**
 
 Uma plataforma web moderna e responsiva para apresentação dos produtos e serviços do projeto MAPFIRE.
+https://liaons.github.io/mapfire_site/
 
 ## 🌟 Sobre o Projeto
 

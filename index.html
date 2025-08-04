@@ -15,7 +15,9 @@
     <!-- Header with logo and navigation -->
     <header>
         <div class="container">
-            <a href="#inicio" class="logo">MAPFIRE<span class="sub-logo"> Maranhão</span></a>
+            <a href="#inicio" class="logo">
+                <img src="content/logo_mapfire.svg" alt="MAPFIRE">
+            </a>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#inicio">Início</a></li>
@@ -40,8 +42,8 @@
             <div class="hero-content">
                 <h1>MAPFIRE</h1>
                 <h2>
-                    <span>Degradação</span><br>
                     <span>Queimadas</span><br>
+                    <span>Desmatamento</span><br>
                     <span>Fluxo de carbono</span>
                 </h2>
                 <p>Dados abertos e análises científicas para decisões de conservação, restauração e clima para o Maranhão.</p>
@@ -55,35 +57,50 @@
 
     <!-- Produtos section -->
     <section id="produtos" class="products">
-        <div class="vertical-text">PRODUTOS</div>
-        <div class="products-wrapper">
-            <!-- Card 1 -->
-            <div class="product-card product-1">
-                <div class="product-image"></div>
-                <h3>Brasa <span>2001‑2020</span></h3>
-                <p>Produto de área queimada anual em resolução de 30&nbsp;m com uma metodologia de harmonização.</p>
-                <a href="#" class="card-button" onclick="openPopup('brasa')">Saiba mais →</a>
-            </div>
-            <!-- Card 2 -->
-            <div class="product-card product-2">
-                <div class="product-image"></div>
-                <h3>Landscape <span>2001‑2020</span></h3>
-                <p>Produto de área queimada anual em resolução de 30&nbsp;m que harmoniza entre produtos consolidados.</p>
-                <a href="#" class="card-button" onclick="openPopup('landscape')">Saiba mais →</a>
-            </div>
-            <!-- Card 3 -->
-            <div class="product-card product-3">
-                <div class="product-image"></div>
-                <h3>EstoqueC <span>1990‑2020</span></h3>
-                <p>Produto de estoque de carbono acima do solo, harmonizado com métricas temporais associadas.</p>
-                <a href="#" class="card-button" onclick="openPopup('estoquec')">Veja mais →</a>
-            </div>
-            <!-- Card 4 -->
-            <div class="product-card product-4">
-                <div class="product-image"></div>
-                <h3>Balanço CO₂ <span>1990‑2020</span></h3>
-                <p>Produto de balanço anual de carbono estimado para todo o Maranhão com métricas temporais.</p>
-                <a href="#" class="card-button" onclick="openPopup('balanco')">Veja mais →</a>
+        <!-- Seção do texto vertical (10%) -->
+        <div class="products-text-section">
+            <div class="vertical-text">PRODUTOS</div>
+        </div>
+        
+        <!-- Seção do slider dos produtos (90%) -->
+        <div class="products-slider-section">
+            <div class="products-wrapper" id="productsWrapper">
+                <!-- Card 1: EstoqueC (Biomassa) -->
+                <div class="product-card product-1">
+                    <div class="product-image"></div>
+                    <div class="product-content">
+                        <h3>EstoqueC <span>1990‑2020</span></h3>
+                        <p>Produto de estoque de carbono acima do solo, harmonizado com métricas temporais associadas.</p>
+                        <a href="#" class="card-button" onclick="openPopup('estoquec')">Veja mais →</a>
+                    </div>
+                </div>
+                <!-- Card 2: Balanço CO₂ -->
+                <div class="product-card product-2">
+                    <div class="product-image"></div>
+                    <div class="product-content">
+                        <h3>Balanço CO₂ <span>1990‑2020</span></h3>
+                        <p>Produto de balanço anual de carbono estimado para todo o Maranhão com métricas temporais.</p>
+                        <a href="#" class="card-button" onclick="openPopup('balanco')">Veja mais →</a>
+                    </div>
+                </div>
+                <!-- Card 3: Brasa -->
+                <div class="product-card product-3">
+                    <div class="product-image"></div>
+                    <div class="product-content">
+                        <h3>Brasa <span>2001‑2020</span></h3>
+                        <p>Produto de área queimada anual em resolução de 30&nbsp;m com uma metodologia de harmonização.</p>
+                        <a href="#" class="card-button" onclick="openPopup('brasa')">Saiba mais →</a>
+                    </div>
+                </div>
+                <!-- Card 4: Landscape -->
+                <div class="product-card product-4">
+                    <div class="product-image"></div>
+                    <div class="product-content">
+                        <h3>Landscape <span>2001‑2020</span></h3>
+                        <p>Produto de área queimada anual em resolução de 30&nbsp;m que harmoniza entre produtos consolidados.</p>
+                        <a href="#" class="card-button" onclick="openPopup('landscape')">Saiba mais →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -345,21 +362,17 @@
                 <div class="links-grid">
                     <div class="links-column">
                         <a href="#inicio">Início</a>
-                        <a href="#produtos">Produtos</a>
-                        <a href="#importam">A quem importam</a>
-                        <a href="#publicacoes">Publicações</a>
-                    </div>
-                    <div class="links-column">
-                        <a href="#">Metodologia</a>
-                        <a href="#">Relatórios</a>
-                        <a href="#">Dashboard</a>
-                        <a href="#">Repositórios</a>
-                    </div>
-                    <div class="links-column">
-                        <a href="#">Equipe</a>
-                        <a href="#">Códigos</a>
                         <a href="#">Sobre o Projeto</a>
+                        <a href="#">Equipe</a>
+                        <a href="#numeros">Números</a>
                         <a href="#contato">Contato</a>
+                    </div>
+                    <div class="links-column">
+                        <a href="#">Dashboard</a>
+                        <a href="#produtos">Produtos</a>
+                        <a href="#publicacoes">Publicações</a>
+                        <a href="#">Códigos</a>
+                        <a href="#">Repositórios</a>
                     </div>
                 </div>
             </div>
@@ -411,8 +424,7 @@
                             </a>
                         </div>
                         <div class="brand-logo">
-                            <span class="logo-main">MAPFIRE</span>
-                            <span class="logo-sub">Maranhão</span>
+                            <img src="content/logo_mapfire_negativa.svg" alt="MAPFIRE Maranhão" class="footer-logo">
                         </div>
                     </div>
                 </div>
@@ -454,6 +466,9 @@
             
             // Inicializa funcionalidades do footer
             initFooterFunctionalities();
+            
+            // Inicializa slider dos produtos
+            initProductsSlider();
         });
 
         // Função para funcionalidades do footer
@@ -672,6 +687,109 @@
             // Verifica imediatamente se já está visível
             checkScroll();
         }
+        
+        // Função para inicializar slider dos produtos
+        function initProductsSlider() {
+            const productsSliderSection = document.querySelector('.products-slider-section');
+            const productsWrapper = document.querySelector('.products-wrapper');
+            const productCards = document.querySelectorAll('.product-card');
+            
+            if (!productsSliderSection || !productsWrapper || !productCards.length) return;
+            
+            let isMouseInside = false;
+            let animationFrame = null;
+            
+            // Função para mapear posição do cursor para scroll
+            function updateScrollBasedOnMouse(e) {
+                if (!isMouseInside) return;
+                
+                const rect = productsSliderSection.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const sectionWidth = rect.width;
+                
+                // Calcula a porcentagem da posição do mouse (0 a 1)
+                const mousePercentage = Math.max(0, Math.min(1, mouseX / sectionWidth));
+                
+                // Calcula o scroll máximo possível
+                const maxScroll = productsWrapper.scrollWidth - productsWrapper.clientWidth;
+                
+                // Mapeia a porcentagem para a posição de scroll
+                const targetScroll = mousePercentage * maxScroll;
+                
+                // Aplica o scroll suavemente
+                if (animationFrame) cancelAnimationFrame(animationFrame);
+                
+                animationFrame = requestAnimationFrame(() => {
+                    productsWrapper.scrollLeft = targetScroll;
+                });
+            }
+            
+            // Event listeners para mouse
+            productsSliderSection.addEventListener('mouseenter', (e) => {
+                isMouseInside = true;
+                updateScrollBasedOnMouse(e);
+            });
+            
+            productsSliderSection.addEventListener('mousemove', updateScrollBasedOnMouse);
+            
+            productsSliderSection.addEventListener('mouseleave', () => {
+                isMouseInside = false;
+                if (animationFrame) {
+                    cancelAnimationFrame(animationFrame);
+                    animationFrame = null;
+                }
+            });
+            
+            // Adiciona efeito de "magnetismo" nos cards
+            let currentCardIndex = 0;
+            
+            function snapToNearestCard() {
+                const cardWidth = productCards[0].offsetWidth + 24; // width + gap
+                const scrollPosition = productsWrapper.scrollLeft;
+                const newIndex = Math.round(scrollPosition / cardWidth);
+                
+                if (newIndex !== currentCardIndex) {
+                    currentCardIndex = newIndex;
+                    // Snap suave para o card mais próximo
+                    productsWrapper.scrollTo({
+                        left: newIndex * cardWidth,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+            
+            // Adiciona snap quando o mouse sai da área
+            productsSliderSection.addEventListener('mouseleave', () => {
+                setTimeout(snapToNearestCard, 100);
+            });
+            
+            // Touch/mobile support
+            let touchStartX = 0;
+            let touchCurrentX = 0;
+            let isDragging = false;
+            
+            productsWrapper.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                isDragging = true;
+            });
+            
+            productsWrapper.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+                
+                touchCurrentX = e.touches[0].clientX;
+                const diffX = touchStartX - touchCurrentX;
+                productsWrapper.scrollLeft += diffX;
+                touchStartX = touchCurrentX;
+            });
+            
+            productsWrapper.addEventListener('touchend', () => {
+                isDragging = false;
+                snapToNearestCard();
+            });
+        }
     </script>
+    
+    <!-- Script principal da aplicação -->
+    <script src="script.js"></script>
 </body>
 </html>

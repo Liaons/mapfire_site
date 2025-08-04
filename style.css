@@ -1,0 +1,539 @@
+/*
+ * Global styles for the Mapfire Maranhão landing page. This stylesheet
+ * defines the typography, layout and colour palette inspired by the
+ * provided Figma design. Feel free to adjust variables and
+ * breakpoints to customise the look and feel. Images in this demo
+ * use solid background colours as placeholders – swap them for real
+ * images in the `products` and `stakeholders` sections if desired.
+ */
+
+/* Colour palette */
+:root {
+    --primary-colour: #f05a28;     /* bright orange for highlights */
+    --dark-colour: #0a2147;        /* dark blue for text and backgrounds */
+    --light-bg: #f8f4ef;          /* light beige for sections */
+    --white: #ffffff;
+    --grey: #f2f4f6;
+}
+
+/* Reset some defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-colour);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-colour);
+}
+
+.logo .sub-logo {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--dark-colour);
+    margin-left: 4px;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.25rem 0;
+    transition: color 0.2s ease;
+}
+
+nav li a:hover {
+    color: var(--primary-colour);
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    height: 600px;
+    width: 100%;
+    margin-top: 70px; /* account for fixed header */
+    /*
+     * Use a locally extracted image from the Figma design as the hero
+     * background. The linear gradient adds a dark overlay to ensure
+     * legibility of the overlaid text. You can replace
+     * `images/hero.jpg` with your own image if preferred.
+     */
+    background-image: linear-gradient(rgba(10, 33, 71, 0.6), rgba(10, 33, 71, 0.6)),
+        url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 0 1.5rem;
+    text-align: left;
+    color: var(--white);
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-colour);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    max-width: 480px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+}
+
+.btn.primary {
+    background: var(--primary-colour);
+    color: var(--white);
+}
+
+.btn.primary:hover {
+    background: #d84f20;
+}
+
+.btn.secondary {
+    background: var(--dark-colour);
+    color: var(--white);
+}
+
+.btn.secondary:hover {
+    background: #081b38;
+}
+
+/* Products section */
+.products {
+    background: var(--light-bg);
+    padding: 6rem 0;
+    position: relative;
+}
+
+.vertical-text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: var(--primary-colour);
+    color: var(--white);
+    padding: 2rem 0.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.products-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 6rem; /* leave space for vertical label */
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: calc(25% - 1.125rem);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.product-card h3 span {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--dark-colour);
+}
+
+.product-card p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.product-image {
+    height: 140px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder colours for each product card */
+.product-1 .product-image { background-color: #2e2e2e; }
+.product-2 .product-image { background-color: #3a7f5b; }
+.product-3 .product-image { background-color: #7aa67a; }
+.product-4 .product-image { background-color: #e4b645; }
+
+.card-button {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-colour);
+    margin-top: 1rem;
+    align-self: flex-start;
+}
+
+.card-button:hover {
+    text-decoration: underline;
+}
+
+/* Numbers section */
+.numbers {
+    background: var(--white);
+    padding: 6rem 0;
+}
+
+.numbers-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.stats {
+    flex: 1;
+    min-width: 280px;
+}
+
+.stats h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.stat {
+    margin-bottom: 1.5rem;
+}
+
+.stat span {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-colour);
+    display: block;
+}
+
+.stat p {
+    font-size: 0.9rem;
+}
+
+.cta {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-box {
+    background: var(--dark-colour);
+    color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    max-width: 340px;
+}
+
+.cta-box p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Stakeholders section */
+.stakeholders {
+    background: #fafafa;
+    padding: 6rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.stakeholders .images {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.stakeholders .images .img {
+    width: calc(50% - 0.25rem);
+    height: 150px;
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder colours for stakeholder images */
+.img1 { background-color: #8fb8c9; }
+.img2 { background-color: #d8a48f; }
+.img3 { background-color: #b8cfa4; }
+.img4 { background-color: #f7c8a9; }
+
+.stakeholders .content {
+    flex: 1;
+    min-width: 280px;
+    max-width: 500px;
+}
+
+.stakeholders .content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.stakeholders .content p {
+    font-size: 0.95rem;
+}
+
+/* Publications section */
+.publications {
+    background: var(--white);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.publications h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.publications .cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.publication-card {
+    flex: 1;
+    min-width: 250px;
+    height: 180px;
+    background: var(--grey);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Logos section */
+.logos {
+    background: var(--white);
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.logos h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.logo-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.logo-placeholder {
+    width: 120px;
+    height: 60px;
+    background: var(--grey);
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background: var(--primary-colour);
+    color: var(--white);
+    padding: 3rem 1.5rem 2rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-brand {
+    flex: 2;
+    min-width: 220px;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 160px;
+}
+
+.footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul a {
+    color: var(--white);
+    font-size: 0.85rem;
+}
+
+.footer-section ul a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.75rem;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .products-wrapper {
+        padding-left: 3rem;
+    }
+    .product-card {
+        width: calc(50% - 1.125rem);
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+    .hero {
+        height: 500px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+    .vertical-text {
+        display: none;
+    }
+    .products-wrapper {
+        padding-left: 0;
+    }
+    .product-card {
+        width: 100%;
+    }
+    .numbers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .stakeholders {
+        flex-direction: column;
+    }
+    .stakeholders .images {
+        width: 100%;
+    }
+    .stakeholders .content {
+        max-width: 100%;
+        text-align: center;
+    }
+    .publications .publication-card {
+        min-width: 100%;
+    }
+}
